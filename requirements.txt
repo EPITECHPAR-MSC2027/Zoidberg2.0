@@ -13,3 +13,4 @@ nbformat
 albumentations
 cv2
 torch
+dotenv
