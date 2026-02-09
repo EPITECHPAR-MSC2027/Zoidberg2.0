@@ -14,3 +14,14 @@ albumentations
 cv2
 torch
 dotenv
+numpy
+pillow
+matplotlib
+pandas
+umap-learn
+jupyter
+albumentations
+opencv-python
+torch
+torchvision
+torchaudio

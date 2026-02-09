@@ -7,4 +7,4 @@ def classic_KNN(X_train_scaled,y_train,X_test_scaled, y_test, ):
     knn.fit(X_train_scaled, y_train)
     y_pred = knn.predict(X_test_scaled)
     accuracy_without_reduction = accuracy_score(y_test, y_pred)
-    return f" {accuracy_without_reduction:.4f}"
+    return accuracy_without_reduction

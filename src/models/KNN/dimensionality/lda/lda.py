@@ -14,4 +14,4 @@ def implementation_with_LDA(y_train,X_train_scaled,X_test_scaled,y_test):
     knn_lda.fit(X_train_lda, y_train)
     y_pred_lda = knn_lda.predict(X_test_lda)
     accuracy_with_lda = accuracy_score(y_test, y_pred_lda)
-    return f" {accuracy_with_lda:.4f}"
+    return accuracy_with_lda

@@ -9,6 +9,7 @@ from src.preprocessing import (
 from src.models.KNN.dimensionality.classic import (classic_KNN)
 from src.models.KNN.dimensionality.pca import (implementation_with_PCA)
 from src.models.KNN.dimensionality.lda import (implementation_with_LDA)
+from src.models.KNN.dimensionality.visualisation import (accuracy_visualisation)
 
 dataset_name = "PAR8/chest-xray-pneumonia"
 
@@ -60,7 +61,13 @@ def launchKNN():
     print(f"Accuracy: {result_lda}")
     print("✅ LDA appliquée")
     print(" ......... Fin de l'entraînement du modèle KNN ........")
-
+    # Modelisation
+    # Données des résultats
+    accuracy_visualisation(
+        ['KNN\n(sans réduction)', 'KNN + PCA\n(100 composantes)', 'KNN + LDA\n(2 composantes)'],
+        [result_knn, result_pca, result_lda],
+        ['#FF6B6B', '#4ECDC4', '#95E1D3']
+        )
 
 if __name__ == "__main__":
     # Testing

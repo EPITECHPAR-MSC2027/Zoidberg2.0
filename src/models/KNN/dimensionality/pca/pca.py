@@ -12,4 +12,4 @@ def implementation_with_PCA(X_train_scaled,X_test_scaled, y_train, y_test):
     knn_pca.fit(X_train_pca, y_train)
     y_pred_pca = knn_pca.predict(X_test_pca)
     accuracy_with_pca = accuracy_score(y_test, y_pred_pca)
-    return f"{accuracy_with_pca:.4f}"
+    return accuracy_with_pca
