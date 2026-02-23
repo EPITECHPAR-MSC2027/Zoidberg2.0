@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZOIDBERG 2.0 - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main>
+    
+<h1>ZOIDBERG 2.0 - Random Forest</h1>
+
+<div class="card">
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="file" required>
+
+        <select name="model_choice">
+            <option value="pixel" {% if selected_model == "pixel" %}selected{% endif %}>
+                Random Forest (Pixels)
+            </option>
+            <option value="hog" {% if selected_model == "hog" %}selected{% endif %}>
+                Random Forest + HOG
+            </option>
+        </select>
+
+        <button type="submit">Analyze X-ray</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+
+        <p><strong>Model used:</strong>
+            {% if selected_model == "hog" %}
+                Random Forest + HOG
+            {% else %}
+                Random Forest (Pixels)
+            {% endif %}
+        </p>
+
+        <p class="prediction">
+            Diagnosis: {{ prediction }}
+        </p>
+
+        <div class="bar-container">
+            <div class="bar {% if prediction == 'NORMAL' %}normal{% endif %}"
+                style="width: {{ probability }}%">
+                {{ probability }}%
+            </div>
+        </div>
+
+    </div>
+    {% endif %}
+</div>
+
+<div class="card">
+    <h2>Classification Report</h2>
+    <pre>{{ report }}</pre>
+</div>
+
+<div class="card">
+    <h2>Confusion Matrix</h2>
+    <pre>{{ cm }}</pre>
+</div>
+
+<div class="card">
+    <h2>ROC-AUC</h2>
+    <p>{{ roc_auc }}</p>
+</div>
+
+<div class="card">
+    <h2>ROC Curve</h2>
+    <img src="data:image/png;base64,{{ roc_img }}">
+</div>
+
+<div class="card">
+    <h2>Model Performance</h2>
+    <img src="data:image/png;base64,{{ metrics_img }}" class="img-fluid">
+
+</div>
+<div class="card">
+    <h2>Threshold vs Recall</h2>
+    <img src="data:image/png;base64,{{ thr_img }}" class="img-fluid">
+</div>
+
+</main>
+</body>
+</html>
