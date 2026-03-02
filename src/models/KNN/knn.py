@@ -67,7 +67,7 @@ def launchKNN():
         ['KNN\n(sans réduction)', 'KNN + PCA\n(100 composantes)', 'KNN + LDA\n(2 composantes)'],
         [result_knn, result_pca, result_lda],
         ['#FF6B6B', '#4ECDC4', '#95E1D3']
-        )
+    )
 
 if __name__ == "__main__":
     # Testing
