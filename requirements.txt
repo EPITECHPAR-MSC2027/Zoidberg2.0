@@ -11,5 +11,5 @@ tqdm
 opencv-python
 nbformat
 albumentations
-cv2
 torch
+python-dotenv
