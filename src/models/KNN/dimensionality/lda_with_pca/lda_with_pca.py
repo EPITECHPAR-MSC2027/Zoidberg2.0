@@ -1,10 +1,10 @@
+# KNN avec LDA
 from matplotlib import pyplot as plt
 import numpy as np
-from sklearn.decomposition import PCA
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
-
-def visualisation_with_PCA(X_test_lda, y_pred_lda, y_test):
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.neighbors import KNeighborsClassifier
+def visualisation_with_LDA(X_test_lda, y_pred_lda, y_test):
     plt.figure(figsize=(10, 7))
     
     colors = ['green', 'red', 'blue']
@@ -35,29 +35,31 @@ def visualisation_with_PCA(X_test_lda, y_pred_lda, y_test):
     plt.grid(True, alpha=0.3)
     
     # Sauvegarder l'image
-    plt.savefig('src/models/KNN/results/implementation/result_knn_pca.png', dpi=300, bbox_inches='tight')
+    plt.savefig('src/models/KNN/results/implementation/result_knn_lda.png', dpi=300, bbox_inches='tight')
     plt.close()
 
-# KNN avec PCA
-def implementation_with_PCA(X_train_scaled,X_test_scaled, y_train, y_test):
-    pca = PCA(n_components=100)
-    X_train_pca = pca.fit_transform(X_train_scaled)
-    X_test_pca = pca.transform(X_test_scaled)
-
-    knn_pca = KNeighborsClassifier(n_neighbors=5)
-    knn_pca.fit(X_train_pca, y_train)
-    y_pred_pca = knn_pca.predict(X_test_pca)
-
-    np.save("y_pred_lda.npy", y_pred_pca)
-
-    for i, (pred, real) in enumerate(zip(y_pred_pca, y_test)):
+def metrics_with_LDA(y_pred_lda, y_test):
+    for i, (pred, real) in enumerate(zip(y_pred_lda, y_test)):
         statut = "✅" if pred == real else "❌"
         print(f"Image {i+1} : Prédit={pred}, Réel={real} {statut}")
 
-    accuracy_with_lda = accuracy_score(y_test, y_pred_pca)
+    accuracy_with_lda = accuracy_score(y_test, y_pred_lda)
     print(f"\nPrécision finale : {accuracy_with_lda * 100:.2f}%")
 
-    # visualisation_with_PCA(X_test_pca, y_pred_pca, y_test)
+def implementation_LDA_with_PCA(y_train, X_train_pca, X_test_pca, y_test):
+    n_classes = len(np.unique(y_train))
+    lda = LinearDiscriminantAnalysis(n_components=min(2, n_classes-1))
+    X_train_lda = lda.fit_transform(X_train_pca, y_train)
+    X_test_lda = lda.transform(X_test_pca)
+    
+    knn_lda = KNeighborsClassifier(n_neighbors=100)
+    knn_lda.fit(X_train_lda, y_train)
 
-    accuracy_with_pca = accuracy_score(y_test, y_pred_pca)
-    return accuracy_with_pca
+    y_pred_lda = knn_lda.predict(X_test_lda)
+   
+    metrics_with_LDA(y_pred_lda, y_test)
+    #visualisation_with_LDA(X_test_lda, y_pred_lda, y_test)
+    
+    accuracy_with_lda = accuracy_score(y_test, y_pred_lda)
+    
+    return accuracy_with_lda

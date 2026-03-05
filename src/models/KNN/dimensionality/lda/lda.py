@@ -38,18 +38,27 @@ def visualisation_with_LDA(X_test_lda, y_pred_lda, y_test):
     plt.savefig('src/models/KNN/results/implementation/result_knn_lda.png', dpi=300, bbox_inches='tight')
     plt.close()
 
-def implementation_with_LDA(y_train, X_train_scaled, X_test_scaled, y_test):
+def metrics_with_LDA(y_pred_lda, y_test):
+    for i, (pred, real) in enumerate(zip(y_pred_lda, y_test)):
+        statut = "✅" if pred == real else "❌"
+        print(f"Image {i+1} : Prédit={pred}, Réel={real} {statut}")
+
+    accuracy_with_lda = accuracy_score(y_test, y_pred_lda)
+    print(f"\nPrécision finale : {accuracy_with_lda * 100:.2f}%")
+
+def implementation_with_LDA(y_train, X_train, X_test, y_test):
     n_classes = len(np.unique(y_train))
-    lda = LinearDiscriminantAnalysis(n_components=min(2, n_classes-1))
-    X_train_lda = lda.fit_transform(X_train_scaled, y_train)
-    X_test_lda = lda.transform(X_test_scaled)
+    lda = LinearDiscriminantAnalysis(n_components=min(3, n_classes-1))
+    X_train_lda = lda.fit_transform(X_train, y_train)
+    X_test_lda = lda.transform(X_test)
     
-    knn_lda = KNeighborsClassifier(n_neighbors=5)
+    knn_lda = KNeighborsClassifier(n_neighbors=100)
     knn_lda.fit(X_train_lda, y_train)
 
     y_pred_lda = knn_lda.predict(X_test_lda)
-    np.save("y_pred_lda.npy", y_pred_lda)
-    visualisation_with_LDA(X_test_lda, y_pred_lda, y_test)
+   
+    metrics_with_LDA(y_pred_lda, y_test)
+    #visualisation_with_LDA(X_test_lda, y_pred_lda, y_test)
     
     accuracy_with_lda = accuracy_score(y_test, y_pred_lda)
     

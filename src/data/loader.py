@@ -18,8 +18,7 @@ def setup_huggingface_auth():
 
 def load_chest_xray_dataset(dataset_name="PAR8/chest-xray-pneumonia"):    
     try:
-        dataset = load_dataset(dataset_name, token=True)
-        return dataset
+        return load_dataset(dataset_name, token=True)
     
     except Exception as e:
         print(f"❌ Erreur lors du chargement: {e}")
