@@ -4,7 +4,6 @@ from sklearn.metrics import accuracy_score
 
 # KNN avec PCA
 def implementation_with_PCA(X_train_scaled,X_test_scaled, y_train, y_test):
-    print("\n2. KNN avec PCA (100 composantes)...")
     pca = PCA(n_components=100)
     X_train_pca = pca.fit_transform(X_train_scaled)
     X_test_pca = pca.transform(X_test_scaled)

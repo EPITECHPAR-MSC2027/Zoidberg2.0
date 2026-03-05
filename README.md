@@ -28,3 +28,11 @@ T-DEV-810-PAR_8/
 ├── README.md
 └── .gitignore
 # T-DEV-810-PAR_8
+
+
+Activate python env :
+.venv/Scripts/Activate.ps1
+
+Create python env (.venv) from vscode
+On the search section :
+ "Python : Create environnement"

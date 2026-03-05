@@ -5,7 +5,6 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.neighbors import KNeighborsClassifier
 
 def implementation_with_LDA(y_train,X_train_scaled,X_test_scaled,y_test):
-    print("\n3. KNN avec LDA (2 composantes max pour 3 classes)...")
     n_classes = len(np.unique(y_train))
     lda = LinearDiscriminantAnalysis(n_components=min(2, n_classes-1))
     X_train_lda = lda.fit_transform(X_train_scaled, y_train)
