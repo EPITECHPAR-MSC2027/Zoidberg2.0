@@ -7,5 +7,8 @@ Pillow
 python-dotenv
 scikit-learn
 seaborn
-torch
 tqdm
+opencv-python
+nbformat
+albumentations
+torch
