@@ -10,6 +10,10 @@ Pillow
 python-dotenv
 scikit-learn
 seaborn
+tqdm
+opencv-python
+nbformat
+albumentations
 torch
 torchvision
 tqdm
