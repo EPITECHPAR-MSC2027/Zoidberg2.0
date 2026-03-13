@@ -1,38 +1,62 @@
-T-DEV-810-PAR_8/
-├── src/
-│   ├── __init__.py
-│   ├── data/
-│   │   ├── __init__.py
-│   │   └── loader.py           # load_dataset()
-│   ├── preprocessing/
-│   │   ├── __init__.py
-│   │   └── processor.py        # dataset_to_arrays()
-│   ├── models/
-│   │   ├── KNN
-│   │   │   ├── __init__.py
-│   │   │   ├── knn.py              # KNN
-        │   ├── evaluation/
-        │   │   ├── __init__.py
-        │   │   └── metrics.py          # accuracy, confusion matrix, etc.
-        │   └── visualization/
-        │       ├── __init__.py
-        │       └── plots.py            # Tous les graphiques
-├── notebooks/
-│   └── analysis.ipynb
-├── configs/
-│   ├── knn_config.yaml
-│   ├── rf_config.yaml
-│   └── svm_config.yaml
-├── main.py                      # 1 seul point d'entrée
-├── requirements.txt
-├── README.md
-└── .gitignore
 # T-DEV-810-PAR_8
 
+## KNN
+### Prérequis — Activation du environnement virtuel
+#### 1. Installer Python
+Vérifie que Python est installé (version 3.10 ou supérieure recommandée) :
+```bash
+python --version
+```
+Téléchargement : https://www.python.org/downloads/
 
-Activate python env :
-.venv/Scripts/Activate.ps1
+#### 2. Cloner le projet
+```bash
+git clone https://github.com/votre-repo/Zoidberg2.0.git
+cd Zoidberg2.0
+```
 
-Create python env (.venv) from vscode
-On the search section :
- "Python : Create environnement"
+#### 3. Créer le virtual environment
+```bash
+python -m venv .venv
+```
+
+#### 4. Activer le virtual environment
+**Windows (CMD / Cmder) :**
+```bash
+.venv\Scripts\activate
+```
+**Windows (PowerShell) :**
+```bash
+.venv\Scripts\Activate.ps1
+```
+**macOS / Linux :**
+```bash
+source .venv/bin/activate
+```
+Une fois activé, tu verras `(.venv)` apparaître au début de ta ligne de commande.
+
+#### 5. Installer les dépendances
+```bash
+pip install -r requirements.txt
+```
+
+#### 6. Désactiver le virtual environment
+```bash
+deactivate
+```
+
+## Notes
+- Toujours activer le venv **avant** de lancer Jupyter ou d'exécuter des scripts
+
+### Structure du dossier
+pneumonia_knn
+├───documents
+│   ├───images
+│   └───texts
+├───notebooks
+│   ├───process
+│   │   ├───dimentiality_reduction
+│   │   └───standard
+│   └───visualisation
+├───pipeline_ci
+└───utils

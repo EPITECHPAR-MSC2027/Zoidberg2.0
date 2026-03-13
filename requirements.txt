@@ -1,5 +1,6 @@
 torch
 torchvision
+torchaudio
 albumentations
 datasets
 Pillow
@@ -10,18 +11,8 @@ seaborn
 tqdm
 opencv-python
 nbformat
-albumentations
-cv2
-torch
-dotenv
-numpy
-pillow
-matplotlib
+import_ipynb
+python-dotenv
 pandas
 umap-learn
 jupyter
-albumentations
-opencv-python
-torch
-torchvision
-torchaudio
