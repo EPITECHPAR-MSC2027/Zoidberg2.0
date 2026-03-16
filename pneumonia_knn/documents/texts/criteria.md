@@ -78,3 +78,10 @@
 
 # argumentation	
 ## Les élèves soutiennent leurs réflexions et défendent leurs choix avec des arguments bien développés et illustrés qui mettent en avant leurs compétences analytiques
+
+
+Find an explicit way to show your results, in a readable way.
+You mustchoose amongmanyvariousmetrics and select the appropriate one(s).
+Look at more advanced metrics like ROC-AUC score.
+It will give you a deeper understanding of your results.
+You should also be able to explain what AUC measures and its advantages over other metrics
