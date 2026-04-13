@@ -5,7 +5,7 @@ __pycache__/
 *.pyc
 .Python
 
-.pkl
+*.pkl
 
 # Virtual Environment
 .venv/
