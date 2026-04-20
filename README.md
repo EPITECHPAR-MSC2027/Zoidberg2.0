@@ -2,25 +2,30 @@
 
 ## KNN
 ### Prérequis — Activation du environnement virtuel
-#### 1. Installer Python
+
+#### Make
+##### 1. Installer Make
+``` bash
+winget install GnuWin32.Make
+```
+##### 2. Environnement variable
+Si en faisant "make --version" il n'existe pas, il faut ajouter make au PATH.
+``` bash
+set PATH=%PATH%;C:\Program Files (x86)\GnuWin32\bin
+```
+#### Python
+##### 1. Installer Python
 Vérifie que Python est installé (version 3.10 ou supérieure recommandée) :
 ```bash
 python --version
 ```
 Téléchargement : https://www.python.org/downloads/
-
-#### 2. Cloner le projet
-```bash
-git clone https://github.com/votre-repo/Zoidberg2.0.git
-cd Zoidberg2.0
-```
-
-#### 3. Créer le virtual environment
+##### 2. Créer le virtual environment
 ```bash
 python -m venv .venv
 ```
-
-#### 4. Activer le virtual environment
+##### 3. Activer le virtual environment
+Toujours activer le venv **avant** de lancer Jupyter ou d'exécuter des scripts
 **Windows (CMD / Cmder) :**
 ```bash
 .venv\Scripts\activate
@@ -35,28 +40,42 @@ source .venv/bin/activate
 ```
 Une fois activé, tu verras `(.venv)` apparaître au début de ta ligne de commande.
 
-#### 5. Installer les dépendances
+##### 4. Installer les dépendances
 ```bash
 pip install -r requirements.txt
 ```
-
-#### 6. Désactiver le virtual environment
+##### 5. Désactiver le virtual environment
 ```bash
 deactivate
 ```
+#### Git
+##### 1. Cloner le projet
+```bash
+git clone https://github.com/votre-repo/Zoidberg2.0.git
+cd Zoidberg2.0
+```
 
-## Notes
-- Toujours activer le venv **avant** de lancer Jupyter ou d'exécuter des scripts
+## Sauvegarder les données potentiellement lourds - GitHub Releases
+- Create a new release
+```bash
+gh release create v1.0 --title "KNN model" --notes "This release stores all large files such as model weights and pipeline artifacts."
+```
+- Sauvegarder un artifact dans le github release
+```bash
+gh release upload ${ReleaseName} knn_pca_lda_grid_search.pkl 
+```
 
 ### Structure du dossier
-pneumonia_knn
+C:.
 ├───documents
 │   ├───images
+│   ├───model
+│   │   ├───dataset
+│   │   └───hyperparameter
 │   └───texts
 ├───notebooks
 │   ├───process
-│   │   ├───dimentiality_reduction
-│   │   └───standard
-│   └───visualisation
-├───pipeline_ci
-└───utils
+│   └───utils
+├───powerpoint
+└───results
+    └───fine_tuning
