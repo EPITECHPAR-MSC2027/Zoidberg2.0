@@ -16,3 +16,7 @@ python-dotenv
 pandas
 umap-learn
 jupyter
+flake8
+huggingface_hub
+ipyvuetify
+imbalanced-learn
