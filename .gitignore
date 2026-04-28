@@ -30,3 +30,6 @@ outputs/
 
 # Environment
 .env
+
+# Results
+pneumonia_knn/document
