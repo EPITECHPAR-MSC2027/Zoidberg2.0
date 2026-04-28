@@ -11,14 +11,14 @@ endif
 
 VENV := .venv
 
-help:
+KNN-help:
 	@echo "============================================================"
 	@echo "         T-DEV-810 - Analyse X-ray KNN                      "
 	@echo "============================================================"
 	@echo ""
 	@echo "Commandes disponibles:"
 	@echo ""
-	@echo "  make install      - Installer les dependances"
+	@echo "  make KNN-install  - Installer les dependances"
 	@echo "  make KNN-run      - Lancer le modele KNN"
 	@echo "  make KNN-clean    - Nettoyer les fichiers generes"
 	@echo "  make KNN-lint     - Verifier la qualite du code"
@@ -27,7 +27,7 @@ help:
 	@echo ""
 
 # Installation des dependances
-install:
+KNN-install:
 	@echo "Installation des dependances..."
 	$(PIP) install -r ../requirements.txt
 	@echo "Installation terminee"
@@ -50,22 +50,7 @@ KNN-clean:
 # Verifier la qualite du code (flake8)
 KNN-lint:
 	@echo "Verification du code..."
-	$(PYTHON) -m flake8 notebooks/* --max-line-length=100
-	@echo "Verification terminee"
-
-KNN-lint-process:
-	@echo "Verification du code..."
-	$(PYTHON) -m flake8 notebooks/process/* --max-line-length=100
-	@echo "Verification terminee"
-
-KNN-lint-utils:
-	@echo "Verification du code..."
-	$(PYTHON) -m flake8 notebooks/utils/* --max-line-length=100
-	@echo "Verification terminee"
-
-KNN-lint-main:
-	@echo "Verification du code..."
-	$(PYTHON) -m flake8 notebooks/main.ipynb --max-line-length=100
+	$(PYTHON) -m flake8 pneumonia_knn/ --max-line-length=100
 	@echo "Verification terminee"
 
 # Creer l'environnement virtuel
@@ -82,11 +67,6 @@ activate:
 	@echo "   Linux/Mac: source .venv/bin/activate"
 
 deactivate:
-	@echo "Desactivation de l'environnement virtuel..."
+	@echo "Comment desactiver l'environnement virtuel..."
 	@echo "   Windows: ..\\.venv\\Scripts\\deactivate"
 	@echo "   Linux/Mac: deactivate"
-
-zip_train:
-	@echo "Compression des donnees d'entrainement..."
-	$(PYTHON) -c "import zipfile; zipfile.ZipFile('dataset_train.zip', 'w', zipfile.ZIP_DEFLATED).write('dataset_train.pkl')"
-	@echo "Compression terminee"
