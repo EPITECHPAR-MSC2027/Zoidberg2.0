@@ -1,0 +1,24 @@
+{
+  "model": "EfficientNetB0",
+  "timestamp": "2026-05-31 19:05:30",
+  "config": {
+    "learning_rate": 0.0001,
+    "batch_size": 32,
+    "num_epochs": 8,
+    "transfer_learning": true
+  },
+  "train_pool_size": 5227,
+  "history": {
+    "train_loss": [
+      0.7084318329071437,
+      0.555090806418996,
+      0.5088620449494559,
+      0.4810106672028727,
+      0.43973385611478105,
+      0.43206396439528405,
+      0.40134641178905883,
+      0.39839881185890497
+    ]
+  },
+  "weights_file": "efficientnet_b0_final.pt"
+}

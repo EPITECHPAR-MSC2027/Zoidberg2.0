@@ -1,6 +1,9 @@
 albumentations
 datasets
+grad-cam
+ipynb
 matplotlib
+nbformat
 numpy
 opencv-python
 Pillow
@@ -8,4 +11,5 @@ python-dotenv
 scikit-learn
 seaborn
 torch
+torchvision
 tqdm
