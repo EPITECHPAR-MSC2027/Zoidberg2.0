@@ -10,6 +10,6 @@ seaborn
 tqdm
 opencv-python
 nbformat
-albumentations
-torch
 python-dotenv
+ipynb
+grad-cam

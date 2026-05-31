@@ -1,0 +1,14 @@
+{
+  "best_config": {
+    "learning_rate": 0.0001,
+    "batch_size": 32,
+    "num_epochs": 8,
+    "transfer_learning": true
+  },
+  "best_metrics": {
+    "accuracy_mean": 0.8369989717768895,
+    "precision_mean": 0.8355091524850117,
+    "recall_mean": 0.8310671080859605,
+    "f1_mean": 0.8303065339902229
+  }
+}
