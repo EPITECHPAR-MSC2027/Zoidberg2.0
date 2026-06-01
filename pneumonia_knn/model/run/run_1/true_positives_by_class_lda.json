@@ -1,0 +1,17 @@
+{
+    "implementation": "PCA+LDA",
+    "classes": {
+        "NORMAL": {
+            "true_positives": 74,
+            "total": 234
+        },
+        "BACTERIA": {
+            "true_positives": 162,
+            "total": 242
+        },
+        "VIRUS": {
+            "true_positives": 46,
+            "total": 148
+        }
+    }
+}

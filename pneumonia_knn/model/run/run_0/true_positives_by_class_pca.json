@@ -1,0 +1,17 @@
+{
+    "implementation": "PCA",
+    "classes": {
+        "NORMAL": {
+            "true_positives": 121,
+            "total": 234
+        },
+        "BACTERIA": {
+            "true_positives": 144,
+            "total": 242
+        },
+        "VIRUS": {
+            "true_positives": 91,
+            "total": 148
+        }
+    }
+}
