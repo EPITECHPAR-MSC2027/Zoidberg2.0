@@ -142,5 +142,77 @@
             "ROC-AUC": 0.8716693500378708
         },
         "result_folder": "../results/logistic_regression/experiment_4"
+    },
+    {
+        "experiment_id": 5,
+        "date": "2026-06-04 15:57:42",
+        "model": "LogisticRegression",
+        "config": {
+            "image_size": [
+                128,
+                128
+            ],
+            "features": "raw_pixels_flatten",
+            "scaler": "StandardScaler",
+            "pca": false,
+            "max_iter": 8000,
+            "solver": "saga",
+            "multi_class": "multinomial",
+            "class_weight": "balanced",
+            "C": 0.01,
+            "penalty": "l2"
+        },
+        "scores_validation": {
+            "Accuracy": 0.741341068170775,
+            "Precision": 0.7309860332733455,
+            "Recall": 0.7460160564834538,
+            "F1-score": 0.7372185223793974,
+            "ROC-AUC": 0.8798075170246383
+        },
+        "scores_test": {
+            "Accuracy": 0.6442307692307693,
+            "Precision": 0.6857645985218849,
+            "Recall": 0.6389135480044571,
+            "F1-score": 0.6218121080063713,
+            "ROC-AUC": 0.8449089159282378
+        },
+        "result_folder": "../results/logistic_regression/experiment_5"
+    },
+    {
+        "experiment_id": 6,
+        "date": "2026-06-04 15:59:27",
+        "model": "LogisticRegression",
+        "config": {
+            "image_size": [
+                128,
+                128
+            ],
+            "features": "raw_pixels_flatten",
+            "scaler": "StandardScaler",
+            "pca": true,
+            "pca_n_components": 0.95,
+            "pca_output_dimensions": 383,
+            "max_iter": 8000,
+            "solver": "saga",
+            "multi_class": "multinomial",
+            "class_weight": "balanced",
+            "C": 0.01,
+            "penalty": "l2"
+        },
+        "scores_validation": {
+            "Accuracy": 0.7567049808429118,
+            "Precision": 0.7564188318606325,
+            "Recall": 0.7567049808429118,
+            "F1-score": 0.7563829556591467,
+            "ROC-AUC": 0.9030640331175408
+        },
+        "scores_test": {
+            "Accuracy": 0.6762820512820513,
+            "Precision": 0.7241920266339751,
+            "Recall": 0.6843625252716161,
+            "F1-score": 0.6516012909906039,
+            "ROC-AUC": 0.8710361958549006
+        },
+        "result_folder": "../results/logistic_regression/experiment_6"
     }
 ]
