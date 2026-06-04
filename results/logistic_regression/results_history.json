@@ -1,0 +1,146 @@
+[
+    {
+        "experiment_id": 1,
+        "date": "2026-06-04 13:40:38",
+        "model": "LogisticRegression",
+        "config": {
+            "image_size": [
+                128,
+                128
+            ],
+            "features": "raw_pixels_flatten",
+            "scaler": "StandardScaler",
+            "pca": false,
+            "max_iter": 8000,
+            "solver": "saga",
+            "multi_class": "multinomial",
+            "class_weight": "balanced",
+            "C": 0.01,
+            "penalty": "l2"
+        },
+        "scores_validation": {
+            "Accuracy": 0.764367816091954,
+            "Precision": 0.7629694329298252,
+            "Recall": 0.764367816091954,
+            "F1-score": 0.7622460691436963,
+            "ROC-AUC": 0.9035539701413661
+        },
+        "scores_test": {
+            "Accuracy": 0.6378205128205128,
+            "Precision": 0.6813353992615031,
+            "Recall": 0.6322936095663368,
+            "F1-score": 0.6131523716952912,
+            "ROC-AUC": 0.8414870670598479
+        },
+        "result_folder": "../results/logistic_regression/experiment_1"
+    },
+    {
+        "experiment_id": 2,
+        "date": "2026-06-04 13:42:26",
+        "model": "LogisticRegression",
+        "config": {
+            "image_size": [
+                128,
+                128
+            ],
+            "features": "raw_pixels_flatten",
+            "scaler": "StandardScaler",
+            "pca": true,
+            "pca_n_components": 0.95,
+            "pca_output_dimensions": 383,
+            "max_iter": 8000,
+            "solver": "saga",
+            "multi_class": "multinomial",
+            "class_weight": "balanced",
+            "C": 0.01,
+            "penalty": "l2"
+        },
+        "scores_validation": {
+            "Accuracy": 0.7567049808429118,
+            "Precision": 0.7564188318606325,
+            "Recall": 0.7567049808429118,
+            "F1-score": 0.7563829556591467,
+            "ROC-AUC": 0.9030805478486811
+        },
+        "scores_test": {
+            "Accuracy": 0.6762820512820513,
+            "Precision": 0.7246207450675456,
+            "Recall": 0.6845037981401618,
+            "F1-score": 0.6538265626873222,
+            "ROC-AUC": 0.871673002605626
+        },
+        "result_folder": "../results/logistic_regression/experiment_2"
+    },
+    {
+        "experiment_id": 3,
+        "date": "2026-06-04 14:19:00",
+        "model": "LogisticRegression",
+        "config": {
+            "image_size": [
+                128,
+                128
+            ],
+            "features": "raw_pixels_flatten",
+            "scaler": "StandardScaler",
+            "pca": false,
+            "max_iter": 8000,
+            "solver": "saga",
+            "multi_class": "multinomial",
+            "class_weight": "balanced",
+            "C": 0.01,
+            "penalty": "l2"
+        },
+        "scores_validation": {
+            "Accuracy": 0.764367816091954,
+            "Precision": 0.7629694329298252,
+            "Recall": 0.764367816091954,
+            "F1-score": 0.7622460691436963,
+            "ROC-AUC": 0.9035264455894657
+        },
+        "scores_test": {
+            "Accuracy": 0.6378205128205128,
+            "Precision": 0.6813353992615031,
+            "Recall": 0.6322936095663368,
+            "F1-score": 0.6131523716952912,
+            "ROC-AUC": 0.8414512985954133
+        },
+        "result_folder": "../results/logistic_regression/experiment_3"
+    },
+    {
+        "experiment_id": 4,
+        "date": "2026-06-04 14:21:48",
+        "model": "LogisticRegression",
+        "config": {
+            "image_size": [
+                128,
+                128
+            ],
+            "features": "raw_pixels_flatten",
+            "scaler": "StandardScaler",
+            "pca": true,
+            "pca_n_components": 0.95,
+            "pca_output_dimensions": 383,
+            "max_iter": 8000,
+            "solver": "saga",
+            "multi_class": "multinomial",
+            "class_weight": "balanced",
+            "C": 0.01,
+            "penalty": "l2"
+        },
+        "scores_validation": {
+            "Accuracy": 0.7567049808429118,
+            "Precision": 0.7564188318606325,
+            "Recall": 0.7567049808429118,
+            "F1-score": 0.7563829556591467,
+            "ROC-AUC": 0.9030750429383009
+        },
+        "scores_test": {
+            "Accuracy": 0.6762820512820513,
+            "Precision": 0.7246207450675456,
+            "Recall": 0.6845037981401618,
+            "F1-score": 0.6538265626873222,
+            "ROC-AUC": 0.8716693500378708
+        },
+        "result_folder": "../results/logistic_regression/experiment_4"
+    }
+]
