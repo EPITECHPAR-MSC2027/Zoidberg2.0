@@ -1,0 +1,68 @@
+{
+  "model": "SVM",
+  "timestamp": "2026-06-07 14:22:00",
+  "config": {
+    "C": 10,
+    "gamma": "scale",
+    "kernel": "rbf",
+    "pca_variance": 0.95
+  },
+  "test_size": 624,
+  "metrics": {
+    "accuracy": 0.6794871794871795,
+    "precision": 0.6923553059701067,
+    "recall": 0.6712958985686258,
+    "f1": 0.653617518249094,
+    "roc_auc": 0.878550857880316
+  },
+  "classification_report": {
+    "normal": {
+      "precision": 0.8629032258064516,
+      "recall": 0.45726495726495725,
+      "f1-score": 0.5977653631284916,
+      "support": 234.0
+    },
+    "bacteria": {
+      "precision": 0.7533783783783784,
+      "recall": 0.9214876033057852,
+      "f1-score": 0.828996282527881,
+      "support": 242.0
+    },
+    "virus": {
+      "precision": 0.46078431372549017,
+      "recall": 0.6351351351351351,
+      "f1-score": 0.5340909090909091,
+      "support": 148.0
+    },
+    "accuracy": 0.6794871794871795,
+    "macro avg": {
+      "precision": 0.6923553059701067,
+      "recall": 0.6712958985686258,
+      "f1-score": 0.653617518249094,
+      "support": 624.0
+    },
+    "weighted avg": {
+      "precision": 0.7250528859577721,
+      "recall": 0.6794871794871795,
+      "f1-score": 0.6723391825148538,
+      "support": 624.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      107,
+      32,
+      95
+    ],
+    [
+      4,
+      223,
+      15
+    ],
+    [
+      13,
+      41,
+      94
+    ]
+  ]
+}

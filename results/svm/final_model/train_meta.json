@@ -1,0 +1,17 @@
+{
+  "model": "SVM",
+  "timestamp": "2026-06-07 14:16:51",
+  "config": {
+    "C": 10,
+    "gamma": "scale",
+    "kernel": "rbf",
+    "pca_variance": 0.95
+  },
+  "augment": true,
+  "train_pool_size": 5227,
+  "pca_components": 968,
+  "training_time_s": 193.1,
+  "train_accuracy": 0.9921561124928258,
+  "total_support_vectors": 4295,
+  "pipeline_file": "svm_pipeline.joblib"
+}

@@ -1,0 +1,51 @@
+    [train] processed 10 batches
+    [train] processed 20 batches
+    [train] processed 30 batches
+    [train] processed 40 batches
+    [train] processed 50 batches
+    [train] processed 60 batches
+    [train] processed 70 batches
+    [train] processed 80 batches
+    [train] processed 90 batches
+    [train] processed 100 batches
+train: 3484 images
+    [val] processed 10 batches
+    [val] processed 20 batches
+    [val] processed 30 batches
+    [val] processed 40 batches
+    [val] processed 50 batches
+val: 1743 images
+    [train] processed 10 batches
+    [train] processed 20 batches
+    [train] processed 30 batches
+    [train] processed 40 batches
+    [train] processed 50 batches
+    [train] processed 60 batches
+    [train] processed 70 batches
+    [train] processed 80 batches
+    [train] processed 90 batches
+    [train] processed 100 batches
+train: 3485 images
+    [val] processed 10 batches
+    [val] processed 20 batches
+    [val] processed 30 batches
+    [val] processed 40 batches
+    [val] processed 50 batches
+val: 1742 images
+    [train] processed 10 batches
+    [train] processed 20 batches
+    [train] processed 30 batches
+    [train] processed 40 batches
+    [train] processed 50 batches
+    [train] processed 60 batches
+    [train] processed 70 batches
+    [train] processed 80 batches
+    [train] processed 90 batches
+    [train] processed 100 batches
+train: 3485 images
+    [val] processed 10 batches
+    [val] processed 20 batches
+    [val] processed 30 batches
+    [val] processed 40 batches
+    [val] processed 50 batches
+val: 1742 images

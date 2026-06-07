@@ -1,0 +1,14 @@
+{
+  "best_config": {
+    "C": 10,
+    "gamma": "scale",
+    "kernel": "rbf",
+    "pca_variance": 0.95
+  },
+  "best_metrics": {
+    "accuracy_mean": 0.7543509558434932,
+    "precision_mean": 0.7410288055842753,
+    "recall_mean": 0.7401126746043133,
+    "f1_mean": 0.7373414374916075
+  }
+}
