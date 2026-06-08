@@ -1,0 +1,32 @@
+{
+  "model": "RandomForestClassifier",
+  "timestamp": "2026-06-08 03:23:15",
+  "config": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "min_samples_split": 5,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "criterion": "gini",
+    "use_smote": true,
+    "smote_k_neighbors": 3
+  },
+  "augmentation": false,
+  "feature_type": "HOG",
+  "hog_config": {
+    "orientations": 12,
+    "pixels_per_cell": 8,
+    "cells_per_block": 2,
+    "block_norm": "L2-Hys"
+  },
+  "train_pool_size": 5227,
+  "fit_samples": 7608,
+  "n_features": 34992,
+  "label_names": [
+    "normal",
+    "bacteria",
+    "virus"
+  ],
+  "model_path": "models\\random_forest\\final_model\\random_forest_final.joblib",
+  "scaler_path": "models\\random_forest\\final_model\\scaler.joblib"
+}
