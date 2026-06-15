@@ -1,0 +1,36 @@
+{
+    "implementation": "PCA (test)",
+    "report": {
+        "NORMAL": {
+            "precision": 0.8,
+            "recall": 0.5641025641025641,
+            "f1-score": 0.6616541353383458,
+            "support": 234.0
+        },
+        "BACTERIA": {
+            "precision": 0.8558139534883721,
+            "recall": 0.7603305785123967,
+            "f1-score": 0.8052516411378556,
+            "support": 242.0
+        },
+        "VIRUS": {
+            "precision": 0.42213114754098363,
+            "recall": 0.6959459459459459,
+            "f1-score": 0.5255102040816326,
+            "support": 148.0
+        },
+        "accuracy": 0.6714743589743589,
+        "macro avg": {
+            "precision": 0.6926483670097853,
+            "recall": 0.6734596961869689,
+            "f1-score": 0.6641386601859447,
+            "support": 624.0
+        },
+        "weighted avg": {
+            "precision": 0.7320230554170699,
+            "recall": 0.6714743589743589,
+            "f1-score": 0.6850536458791917,
+            "support": 624.0
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "implementation": "PCA (test)",
+    "best_index": 30,
+    "best_params": {
+        "knn__metric": "manhattan",
+        "knn__n_neighbors": 15,
+        "knn__weights": "uniform",
+        "pca__n_components": 30
+    },
+    "label": "metric=manhattan  |  n_neighbors=15  |  weights=uniform  |  n_components=30",
+    "metrics": {
+        "accuracy": 51.7321,
+        "precision": 58.547,
+        "recall": 54.8765,
+        "f1": 52.2732,
+        "roc_auc": 73.969
+    }
+}
