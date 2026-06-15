@@ -1,5 +1,5 @@
 {
-    "implementation": "PCA (test)",
+    "implementation": "PCA",
     "best_params": {
         "knn__metric": "manhattan",
         "knn__n_neighbors": 15,

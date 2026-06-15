@@ -1,0 +1,20 @@
+{
+    "Validation": {
+        "recall_by_class": {
+            "NORMAL": 0.8506,
+            "BACTERIA": 0.6782,
+            "VIRUS": 0.6207
+        },
+        "accuracy": 0.7165,
+        "f1_macro": 0.7167
+    },
+    "Test": {
+        "recall_by_class": {
+            "NORMAL": 0.5641,
+            "BACTERIA": 0.7603,
+            "VIRUS": 0.6959
+        },
+        "accuracy": 0.6715,
+        "f1_macro": 0.6641
+    }
+}
