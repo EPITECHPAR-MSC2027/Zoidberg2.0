@@ -6,7 +6,8 @@
             "VIRUS": 0.6207
         },
         "accuracy": 0.7165,
-        "f1_macro": 0.7167
+        "f1_macro": 0.7167,
+        "roc_auc": 0.8561
     },
     "Test": {
         "recall_by_class": {
@@ -15,6 +16,7 @@
             "VIRUS": 0.6959
         },
         "accuracy": 0.6715,
-        "f1_macro": 0.6641
+        "f1_macro": 0.6641,
+        "roc_auc": 0.8396
     }
 }
