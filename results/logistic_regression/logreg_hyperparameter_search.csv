@@ -1,0 +1,5 @@
+Config,Features,PCA,C,Penalty,Acc. moy.,Prec. moy.,Recall moy.,F1 moy.,ROC-AUC moy.
+1,Pixels,False,0.01,l2,74.1,73.1,74.6,73.7,88.0
+2,Pixels,False,0.1,l2,72.7,71.5,73.1,72.2,87.2
+3,PCA,True,0.01,l2,73.9,73.2,74.5,73.7,88.3
+4,PCA,True,0.1,l2,73.2,72.5,74.0,73.0,87.8
