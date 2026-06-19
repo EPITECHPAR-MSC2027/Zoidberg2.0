@@ -1,86 +1,166 @@
-## pneumonia_knn
+# 🫁 Zoidberg 2.0 - Classification de radiographies thoraciques
 
-Classification de radiographies thoraciques en trois classes — **NORMAL**, **BACTERIA**, **VIRUS** — à l'aide d'un classifieur K plus proches voisins (KNN), précédé d'une réduction de dimension par PCA et d'un rééquilibrage des classes par SMOTE.
+## Description
 
-### Aperçu
+Ce projet vise à classifier automatiquement des radiographies thoraciques en trois catégories :
 
-Le pipeline complet est `StandardScaler → PCA → SMOTE → KNN`, encapsulé dans un unique objet afin d'éviter toute fuite de données. Les hyperparamètres sont sélectionnés par `GridSearchCV` (validation croisée sur le jeu d'entraînement uniquement), avec le **F1-score** comme critère de sélection, choix adapté au déséquilibre des classes.
+- Normal
+- Pneumonia Bacteria
+- Pneumonia Virus
 
-Le modèle est évalué sur deux ensembles indépendants :
+L'objectif est d'évaluer et comparer différentes approches de Machine Learning et de Deep Learning pour la détection de pneumonies à partir d'images médicales.
 
-- **Validation** — contrôle intermédiaire.
-- **Test** — évaluation finale (référence des performances annoncées).
+---
 
-### Prérequis
+## Problématiques
 
-- Python 3.10+
-- Dépendances principales : `scikit-learn`, `imbalanced-learn` (SMOTE), `numpy`, `pandas`, `matplotlib`, `joblib`.
+Ce projet cherche à répondre aux questions suivantes :
 
-Les dépendances sont listées dans le `requirements.txt` situé à la racine du projet (`Zoidberg2.0/`). Installation :
+- Les réseaux de neurones convolutifs (CNN) sont-ils plus performants que les méthodes classiques de Machine Learning pour la classification de radiographies thoraciques ?
+- Les pneumonies bactériennes sont-elles plus faciles à détecter que les pneumonies virales ?
+- Quel est l'impact du Transfer Learning sur les performances d'un CNN médical ?
 
-```bash
-pip install -r requirements.txt
-```
+---
 
-### Utilisation
+## Dataset
 
-1. Placer les datasets sérialisés dans `model/dataset/` (voir l'arborescence ci-dessous).
-2. Ajuster `run_index` en tête de notebook pour nommer le run courant.
-3. Exécuter le notebook `knn_corrige_12.ipynb` de haut en bas.
+Le dataset est composé de radiographies thoraciques réparties en trois classes :
 
-Le notebook charge le `GridSearchCV` pré-entraîné (`model/hyperparameter/`), effectue les prédictions, puis génère pour chaque contexte (finetuning, validation, test, récapitulatif global) les visualisations associées au format **PNG + JSON**.
+| Classe | Description |
+|----------|-------------|
+| Normal | Radiographies sans pneumonie |
+| Pneumonia Bacteria | Pneumonies d'origine bactérienne |
+| Pneumonia Virus | Pneumonies d'origine virale |
 
-> Les résultats sont écrits **hors** de `pneumonia_knn`, à la racine du projet, dans `results/k_nearest_neighbors/run_{index}/` (voir arborescence).
 
-> **⚠️ Avertissement — Téléchargement asynchrone**
->
-> Lors du premier lancement, le notebook télécharge le dataset et le modèle pré-entraîné (GridSearch). **Ce téléchargement ne bloque pas l'exécution** : les cellules suivantes peuvent démarrer avant la fin du chargement, ce qui provoque une erreur (par exemple le PCA ou le dataset pas encore disponible).
->
-> **Solution : attendre que le téléchargement soit terminé, puis réexécuter la cellule concernée** (ou relancer le notebook entier). Une fois les fichiers présents en local, le problème ne se reproduit plus.
+## Prétraitement des données
 
-Un `Makefile` est fourni pour les commandes courantes du projet.
+Les images sont :
 
-### Arborescence
+- Converties en RGB
+- Redimensionnées en 224 × 224 pixels
+- Normalisées
+- Chargées via des DataLoaders PyTorch
 
-> Les fichiers `.pkl` (datasets et GridSearch) ne sont pas versionnés : ils sont générés/fournis séparément.
+### Data Augmentation
+
+Uniquement sur l'ensemble d'entraînement :
+
+- Rotations
+- Translations
+- Zoom
+- Symétries horizontales
+- Déformations géométriques
+
+---
+
+## Modèles étudiés
+
+### Logistic Regression
+
+- Pixels aplatis
+- Standardisation
+- PCA (95 % de variance conservée)
+- Régularisation L2
+
+### Random Forest
+
+- Extraction de caractéristiques HOG
+- SMOTE
+- Class Weight équilibré
+
+### Support Vector Machine (SVM)
+
+- Pixels aplatis
+- Standardisation
+- PCA
+- Noyau RBF
+
+### K-Nearest Neighbors (KNN)
+
+- PCA
+- SMOTE
+- Distance Manhattan
+
+### CNN - EfficientNetB0
+
+- Transfer Learning ImageNet
+- Optimiseur Adam
+- Cross Entropy Loss
+
+---
+
+## Méthodologie
+
+- Validation croisée stratifiée
+- Même découpage des folds pour tous les modèles
+- Sélection des hyperparamètres basée sur le F1-score macro
+
+### Métriques utilisées
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- ROC-AUC
+
+---
+
+
+## Conclusions
+
+- Le CNN EfficientNetB0 obtient les meilleures performances sur toutes les métriques.
+- Le Transfer Learning améliore significativement les performances du CNN.
+- Les pneumonies bactériennes sont les plus faciles à détecter.
+- La principale difficulté concerne la distinction entre radiographies normales et pneumonies virales.
+- Les méthodes classiques obtiennent des résultats corrects mais restent limitées par leur représentation simplifiée des images.
+
+---
+
+## Interprétabilité
+
+Les méthodes suivantes ont été utilisées pour interpréter les prédictions :
+
+- Feature Importance
+- Permutation Importance
+- Heatmaps
+- Grad-CAM
+
+Ces techniques permettent de visualiser les régions des radiographies influençant les décisions des modèles.
+
+---
+
+## Technologies utilisées
+
+- Python
+- PyTorch
+- Scikit-Learn
+- NumPy
+- Pandas
+- Matplotlib
+- OpenCV
+- HuggingFace Datasets
+
+---
+
+## Structure du projet
 
 ```text
-pneumonia_knn/
-├── knn_corrige_12.ipynb        # Notebook principal (pipeline + évaluation + visualisations)
-├── Makefile
-└── model/
-    ├── dataset/                # Datasets sérialisés (non versionnés)
-    │   ├── dataset_train.pkl
-    │   ├── dataset_val.pkl
-    │   └── dataset_test.pkl
-    ├── hyperparameter/         # GridSearch pré-entraîné (non versionné)
-    │   └── knn_pca_grid_search.pkl
-    └── run/                    # (réservé)
+├── data/
+├── notebooks/
+├── models/
+├── src/
+│   ├── preprocessing/
+│   ├── training/
+│   ├── evaluation/
+│   └── visualization/
+├── results/
+├── reports/
+└── README.md
 ```
 
-Résultats générés à l'exécution, à la racine du projet :
+---
 
-```text
-Zoidberg2.0/                    # Racine du projet
-├── requirements.txt            # Dépendances Python
-├── pneumonia_knn/              # (ce dossier)
-└── results/
-    └── k_nearest_neighbors/
-        └── run_{index}/
-            ├── finetuning/     # Tableau + barplot du GridSearchCV (PNG + JSON)
-            ├── validation/     # Matrice de confusion, vrais positifs, report, etc.
-            ├── test/           # Idem, sur le jeu de test
-            └── global/         # Récapitulatif global (rappel par classe, accuracy, F1 macro)
-```
+## Auteurs
 
-### Sorties générées
-
-Pour chaque ensemble évalué (validation et test) :
-
-- Matrice de confusion (PNG + JSON)
-- Vrais positifs par classe (PNG + JSON)
-- Classification report (PNG + JSON)
-- Scatter des prédictions en projection 2D (PNG)
-- Feature importance et heatmap pixel (PNG + JSON)
-
-Le dossier `finetuning/` contient les résultats de la recherche d'hyperparamètres, et `global/` la synthèse comparée validation / test.
+Projet réalisé dans le cadre d'un projet académique d'Intelligence Artificielle appliquée à l'imagerie médicale.
