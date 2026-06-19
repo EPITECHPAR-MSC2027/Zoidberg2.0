@@ -1,0 +1,18 @@
+{
+  "best_config": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "min_samples_split": 5,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "criterion": "gini",
+    "use_smote": true,
+    "smote_k_neighbors": 3
+  },
+  "best_metrics": {
+    "accuracy_mean": 0.764107658011632,
+    "precision_mean": 0.7557050495894301,
+    "recall_mean": 0.7490818432313667,
+    "f1_mean": 0.7470254996335886
+  }
+}

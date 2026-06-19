@@ -1,18 +1,18 @@
 {
     "implementation": "PCA",
     "train_test_split": {
-        "accuracy": 0.6763
+        "accuracy": 0.6715
     },
     "cross_validation": {
-        "accuracy_mean": 0.5262,
-        "accuracy_std": 0.0307,
+        "accuracy_mean": 0.7251,
+        "accuracy_std": 0.0098,
         "n_splits": 5,
         "fold_scores": [
-            0.5367,
-            0.4676,
-            0.5579,
-            0.5377,
-            0.5313
+            0.7088,
+            0.7205,
+            0.7269,
+            0.7333,
+            0.7362
         ]
     }
 }

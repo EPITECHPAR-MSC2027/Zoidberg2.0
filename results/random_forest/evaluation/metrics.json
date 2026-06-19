@@ -1,0 +1,84 @@
+{
+  "model": "RandomForestClassifier",
+  "timestamp": "2026-06-08 00:33:31",
+  "config": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "min_samples_split": 5,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "criterion": "gini",
+    "use_smote": true,
+    "smote_k_neighbors": 3
+  },
+  "augmentation": false,
+  "test_size": 624,
+  "metrics": {
+    "accuracy": 0.7131410256410257,
+    "precision": 0.7477049699271922,
+    "recall": 0.714124805033896,
+    "f1": 0.6972045578409265,
+    "roc_auc": 0.9127585135741402
+  },
+  "classification_report": {
+    "normal": {
+      "precision": 0.8974358974358975,
+      "recall": 0.44871794871794873,
+      "f1-score": 0.5982905982905983,
+      "support": 234.0
+    },
+    "bacteria": {
+      "precision": 0.6666666666666666,
+      "recall": 0.9504132231404959,
+      "f1-score": 0.7836456558773425,
+      "support": 242.0
+    },
+    "virus": {
+      "precision": 0.6790123456790124,
+      "recall": 0.7432432432432432,
+      "f1-score": 0.7096774193548387,
+      "support": 148.0
+    },
+    "accuracy": 0.7131410256410257,
+    "macro avg": {
+      "precision": 0.7477049699271922,
+      "recall": 0.714124805033896,
+      "f1-score": 0.6972045578409265,
+      "support": 624.0
+    },
+    "weighted avg": {
+      "precision": 0.7561332700221589,
+      "recall": 0.7131410256410257,
+      "f1-score": 0.696593760876335,
+      "support": 624.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      105,
+      78,
+      51
+    ],
+    [
+      11,
+      230,
+      1
+    ],
+    [
+      1,
+      37,
+      110
+    ]
+  ],
+  "json_outputs": [
+    "metrics.json",
+    "confusion_matrix.json",
+    "metric_scores.json",
+    "predictions.json"
+  ],
+  "image_outputs": [
+    "confusion_matrix.png",
+    "metrics_bar.png",
+    "predictions.png"
+  ]
+}

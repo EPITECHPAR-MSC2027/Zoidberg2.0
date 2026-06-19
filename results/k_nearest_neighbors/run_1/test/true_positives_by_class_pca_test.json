@@ -2,15 +2,15 @@
     "implementation": "PCA (test)",
     "classes": {
         "NORMAL": {
-            "true_positives": 132,
+            "true_positives": 120,
             "total": 234
         },
         "BACTERIA": {
-            "true_positives": 184,
+            "true_positives": 189,
             "total": 242
         },
         "VIRUS": {
-            "true_positives": 103,
+            "true_positives": 111,
             "total": 148
         }
     }

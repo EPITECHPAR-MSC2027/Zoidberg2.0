@@ -4,116 +4,116 @@
     "top_n": 20,
     "top_components": [
         {
-            "component": 4,
-            "importance": 0.043
-        },
-        {
-            "component": 3,
-            "importance": 0.03
-        },
-        {
-            "component": 11,
-            "importance": 0.03
-        },
-        {
             "component": 2,
-            "importance": 0.022
+            "importance": 0.086
+        },
+        {
+            "component": 1,
+            "importance": 0.083
+        },
+        {
+            "component": 0,
+            "importance": 0.048
+        },
+        {
+            "component": 9,
+            "importance": 0.012
         },
         {
             "component": 7,
-            "importance": 0.019
+            "importance": 0.012
         },
         {
-            "component": 17,
-            "importance": 0.015
-        },
-        {
-            "component": 21,
-            "importance": 0.015
-        },
-        {
-            "component": 6,
+            "component": 5,
             "importance": 0.011
         },
         {
-            "component": 15,
+            "component": 21,
             "importance": 0.009
         },
         {
-            "component": 27,
-            "importance": 0.006
+            "component": 18,
+            "importance": 0.005
         },
         {
-            "component": 26,
+            "component": 6,
             "importance": 0.004
         },
         {
-            "component": 22,
+            "component": 16,
+            "importance": 0.003
+        },
+        {
+            "component": 8,
+            "importance": 0.002
+        },
+        {
+            "component": 15,
+            "importance": 0.001
+        },
+        {
+            "component": 27,
             "importance": 0.0
         },
         {
-            "component": 18,
-            "importance": 0.0
-        },
-        {
-            "component": 24,
-            "importance": -0.001
-        },
-        {
-            "component": 23,
-            "importance": -0.002
-        },
-        {
-            "component": 10,
+            "component": 25,
             "importance": -0.003
         },
         {
-            "component": 12,
-            "importance": -0.004
+            "component": 11,
+            "importance": -0.003
         },
         {
-            "component": 16,
+            "component": 26,
             "importance": -0.005
+        },
+        {
+            "component": 17,
+            "importance": -0.005
+        },
+        {
+            "component": 28,
+            "importance": -0.007
+        },
+        {
+            "component": 4,
+            "importance": -0.009
         },
         {
             "component": 20,
-            "importance": -0.005
-        },
-        {
-            "component": 29,
-            "importance": -0.006
+            "importance": -0.01
         }
     ],
     "all_importances": [
-        -0.017,
-        -0.025,
-        0.022,
-        0.03,
-        0.043,
-        -0.023,
+        0.048,
+        0.083,
+        0.086,
+        -0.01,
+        -0.009,
         0.011,
-        0.019,
-        -0.011,
+        0.004,
+        0.012,
+        0.002,
+        0.012,
         -0.019,
         -0.003,
-        0.03,
-        -0.004,
-        -0.011,
-        -0.014,
+        -0.017,
+        -0.026,
+        -0.013,
+        0.001,
+        0.003,
+        -0.005,
+        0.005,
+        -0.023,
+        -0.01,
         0.009,
-        -0.005,
-        0.015,
-        0.0,
+        -0.021,
+        -0.016,
         -0.015,
+        -0.003,
         -0.005,
-        0.015,
         0.0,
-        -0.002,
-        -0.001,
-        -0.009,
-        0.004,
-        0.006,
-        -0.008,
-        -0.006
+        -0.007,
+        -0.017
     ]
 }

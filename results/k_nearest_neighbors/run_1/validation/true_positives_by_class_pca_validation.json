@@ -2,16 +2,16 @@
     "implementation": "PCA (validation)",
     "classes": {
         "NORMAL": {
-            "true_positives": 148,
-            "total": 174
+            "true_positives": 126,
+            "total": 135
         },
         "BACTERIA": {
-            "true_positives": 118,
-            "total": 174
+            "true_positives": 150,
+            "total": 254
         },
         "VIRUS": {
-            "true_positives": 108,
-            "total": 174
+            "true_positives": 87,
+            "total": 134
         }
     }
 }

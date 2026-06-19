@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Accuracy",
+    "score": 0.7131410256410257,
+    "score_percent": 71.31410256410257
+  },
+  {
+    "name": "Precision",
+    "score": 0.7477049699271922,
+    "score_percent": 74.77049699271922
+  },
+  {
+    "name": "Recall",
+    "score": 0.714124805033896,
+    "score_percent": 71.4124805033896
+  },
+  {
+    "name": "F1-score",
+    "score": 0.6972045578409265,
+    "score_percent": 69.72045578409265
+  },
+  {
+    "name": "ROC-AUC",
+    "score": 0.9127585135741402,
+    "score_percent": 91.27585135741401
+  }
+]
