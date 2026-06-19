@@ -539,5 +539,70 @@
             "ROC-AUC": 0.8717934079795002
         },
         "result_folder": "../results/logistic_regression/experiment_16"
+    },
+    {
+        "experiment_id": 17,
+        "date": "2026-06-19 01:26:16",
+        "model": "LogisticRegression",
+        "config": {
+            "image_size": [
+                128,
+                128
+            ],
+            "features": "raw_pixels_flatten",
+            "scaler": "StandardScaler",
+            "pca": false,
+            "max_iter": 8000,
+            "solver": "saga",
+            "multi_class": "multinomial",
+            "class_weight": "balanced",
+            "C": 0.01,
+            "penalty": "l2"
+        },
+        "scores_validation": {
+            "Accuracy": 0.7436370598571642,
+            "Precision": 0.7336121974906472,
+            "Recall": 0.7463081587662291,
+            "F1-score": 0.739088342071279,
+            "ROC-AUC": 0.8809291046937547
+        },
+        "scores_test": {
+            "Accuracy": 0.6233974358974359,
+            "Precision": 0.6738632670083876,
+            "Recall": 0.617958867958868,
+            "F1-score": 0.5982407653310112,
+            "ROC-AUC": 0.8429865522989138
+        },
+        "result_folder": "../results/logistic_regression/experiment_17"
+    },
+    {
+        "experiment_id": 18,
+        "date": "2026-06-19 01:27:55",
+        "model": "LogisticRegression",
+        "config": {
+            "image_size": [
+                128,
+                128
+            ],
+            "features": "raw_pixels_flatten",
+            "scaler": "StandardScaler",
+            "pca": true,
+            "pca_n_components": 0.95,
+            "pca_output_dimensions": 453,
+            "max_iter": 8000,
+            "solver": "saga",
+            "class_weight": "balanced",
+            "C": 0.01,
+            "penalty": "l2"
+        },
+        "scores_validation": null,
+        "scores_test": {
+            "Accuracy": 0.6666666666666666,
+            "Precision": 0.718931683784625,
+            "Recall": 0.6762864262864263,
+            "F1-score": 0.6470346078271473,
+            "ROC-AUC": 0.8723541449928924
+        },
+        "result_folder": "../results/logistic_regression/experiment_18"
     }
 ]
