@@ -1,0 +1,17 @@
+{
+    "implementation": "PCA",
+    "best_index": 33,
+    "best_params": {
+        "knn__metric": "manhattan",
+        "knn__n_neighbors": 15,
+        "knn__weights": "distance",
+        "pca__n_components": 30
+    },
+    "metrics": {
+        "accuracy": 72.2364,
+        "precision": 74.5661,
+        "recall": 74.1583,
+        "f1": 72.7297,
+        "roc_auc": 88.4629
+    }
+}

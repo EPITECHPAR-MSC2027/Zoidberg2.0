@@ -1,0 +1,119 @@
+{
+    "implementation": "PCA (validation)",
+    "n_components": 30,
+    "top_n": 20,
+    "top_components": [
+        {
+            "component": 1,
+            "importance": 0.046
+        },
+        {
+            "component": 2,
+            "importance": 0.01
+        },
+        {
+            "component": 26,
+            "importance": -0.001
+        },
+        {
+            "component": 16,
+            "importance": -0.007
+        },
+        {
+            "component": 21,
+            "importance": -0.008
+        },
+        {
+            "component": 18,
+            "importance": -0.01
+        },
+        {
+            "component": 15,
+            "importance": -0.01
+        },
+        {
+            "component": 8,
+            "importance": -0.011
+        },
+        {
+            "component": 28,
+            "importance": -0.011
+        },
+        {
+            "component": 10,
+            "importance": -0.012
+        },
+        {
+            "component": 6,
+            "importance": -0.012
+        },
+        {
+            "component": 27,
+            "importance": -0.013
+        },
+        {
+            "component": 29,
+            "importance": -0.013
+        },
+        {
+            "component": 4,
+            "importance": -0.015
+        },
+        {
+            "component": 5,
+            "importance": -0.015
+        },
+        {
+            "component": 13,
+            "importance": -0.015
+        },
+        {
+            "component": 23,
+            "importance": -0.016
+        },
+        {
+            "component": 24,
+            "importance": -0.019
+        },
+        {
+            "component": 19,
+            "importance": -0.02
+        },
+        {
+            "component": 25,
+            "importance": -0.021
+        }
+    ],
+    "all_importances": [
+        -0.036,
+        0.046,
+        0.01,
+        -0.021,
+        -0.015,
+        -0.015,
+        -0.012,
+        -0.024,
+        -0.011,
+        -0.021,
+        -0.012,
+        -0.024,
+        -0.024,
+        -0.015,
+        -0.025,
+        -0.01,
+        -0.007,
+        -0.022,
+        -0.01,
+        -0.02,
+        -0.021,
+        -0.008,
+        -0.022,
+        -0.016,
+        -0.019,
+        -0.021,
+        -0.001,
+        -0.013,
+        -0.011,
+        -0.013
+    ]
+}
